@@ -49,61 +49,59 @@ const PlanetComponent: React.FC<PlanetProps> = ({ planetData }) => {
   } = planetData;
 
   return (
-    <div className="bg-gray-100 p-4 rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4">{name}</h2>
-      <div className="mb-6">
-        <h3 className="text-xl font-semibold mb-2">Overview</h3>
-        <p>{overview.content}</p>
-        <a
-          className="text-blue-500"
-          href={overview.source}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Source
-        </a>
+    <div className="bg-[#070724] text-white p-4 rounded-lg shadow-md h-svh">
+      <div className="mb-6 flex justify-evenly pt-9">
+        <div className="w-72">
+          <img className="w-full mt-12" src={images.planet} alt="image" />
+        </div>
+        <div className="w-96 mt-12">
+          <h2 className="text-7xl font-bold mb-8 ">{name}</h2>
+          <p>{overview.content}</p>
+
+          <div className="mb-16 mt-8">
+            Source: {"   "}
+            <a
+              className="text-blue-500 ml-2"
+              href={overview.source}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Wikipediya
+            </a>
+            <a
+              className="text-blue-500"
+              href={structure.source}
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+          </div>
+        </div>
       </div>
-      <div className="mb-6">
-        <h3 className="text-xl font-semibold mb-2">Structure</h3>
-        <p>{structure.content}</p>
-        <a
-          className="text-blue-500"
-          href={structure.source}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Source
-        </a>
+
+      <div className="flex justify-evenly mb-17">
+        <div className="border-slate-300 border-2 p-5">
+          <h3 className="mb-1 font-semibold text-xs ">Rotation</h3>
+          <p className="text-4xl tracking-tighter">{rotation.toUpperCase()}</p>
+        </div>
+        <div className="border-slate-300 border-2 p-5">
+          <h3 className="mb-1 font-semibold text-xs ">Revolution</h3>
+          <p className="text-4xl tracking-tighter">
+            {revolution.toUpperCase()}
+          </p>
+        </div>
+        <div className="border-slate-300 border-2 p-5">
+          <h3 className="mb-1 font-semibold text-xs ">Radius</h3>
+          <p className="text-4xl tracking-tighter">{radius.toUpperCase()}</p>
+        </div>
+        <div className="border-slate-300 border-2 p-5">
+          <h3 className="mb-1 font-semibold text-xs ">Temperature</h3>
+          <p className="text-4xl tracking-tighter">
+            {temperature.toUpperCase()}
+          </p>
+        </div>
       </div>
-      <div className="mb-6">
-        <h3 className="text-xl font-semibold mb-2">Geology</h3>
-        <p>{geology.content}</p>
-        <a
-          className="text-blue-500"
-          href={geology.source}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Source
-        </a>
-      </div>
-      <div className="mb-4">
-        <h3 className="text-xl font-semibold">Rotation</h3>
-        <p>{rotation}</p>
-      </div>
-      <div className="mb-4">
-        <h3 className="text-xl font-semibold">Revolution</h3>
-        <p>{revolution}</p>
-      </div>
-      <div className="mb-4">
-        <h3 className="text-xl font-semibold">Radius</h3>
-        <p>{radius}</p>
-      </div>
-      <div className="mb-4">
-        <h3 className="text-xl font-semibold">Temperature</h3>
-        <p>{temperature}</p>
-      </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+
+      {/* <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
         <div>
           <h3 className="text-xl font-semibold">Planet Image</h3>
           <img className="w-full" src={images.planet} alt={`Planet ${name}`} />
@@ -115,16 +113,15 @@ const PlanetComponent: React.FC<PlanetProps> = ({ planetData }) => {
             src={images.internal}
             alt={`Internal Structure of ${name}`}
           />
-        </div>
-        <div>
+        </div> */}
+      {/* <div>
           <h3 className="text-xl font-semibold">Geology Image</h3>
           <img
             className="w-full"
             src={images.geology}
             alt={`Geology of ${name}`}
           />
-        </div>
-      </div>
+        </div> */}
     </div>
   );
 };

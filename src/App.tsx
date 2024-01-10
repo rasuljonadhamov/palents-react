@@ -7,19 +7,19 @@ import { CountryContext } from "./contexts/countryContext.js";
 function App() {
   const { selectedPlanet } = useContext(CountryContext);
 
-  function showPlanet(data) {
-    let planets = data.find(
+  function showPlanet() {
+    let planet = data.find(
       (planet) => planet.name.toLowerCase() === selectedPlanet
     );
-    return planets;
+    return planet;
   }
 
-  const planets = showPlanet(data);
+  const planet = showPlanet();
 
   return (
     <div className="container mx-auto bg-[#070724]">
       <Navbar />
-      {planets && <PlanetComponent planetData={planets} />}
+      {planet && <PlanetComponent planetData={planet} />}
     </div>
   );
 }

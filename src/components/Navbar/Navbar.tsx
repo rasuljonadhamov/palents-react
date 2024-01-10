@@ -6,8 +6,8 @@ const Navbar = () => {
   const { setSelectedPlanet } = useContext(CountryContext);
 
   return (
-    <nav className="flex justify-between py-4">
-      <Link to="/" className="text-white">
+    <nav className="flex justify-between py-4 ">
+      <Link to="/" className="text-white ">
         THE PLANETS
       </Link>
       <ul className="flex ">
