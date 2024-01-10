@@ -54,13 +54,13 @@ const Navbar = () => {
           >
             saturn
           </Link>
-          <Link
+          {/* <Link
             onClick={(e) => setSelectedPlanet(e.target.innerHTML)}
             to="/"
             className="no-underline hover:underline uppercase text-white px-3"
           >
             uranus
-          </Link>
+          </Link> */}
           <Link
             onClick={(e) => setSelectedPlanet(e.target.innerHTML)}
             to="/"
