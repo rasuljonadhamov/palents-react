@@ -1,4 +1,4 @@
-[
+export const data =  [
   {
     "name": "Mercury",
     "overview": {
@@ -192,3 +192,4 @@
     }
   }
 ]
+
